@@ -5,9 +5,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id="meter" class="com.demo.spring.bo.Meter">
-        <property name="meterCode" value="M123"/>
+    <bean id="singletonMeter" class="com.demo.spring.bo.Meter" scope="singleton"
+          init-method="init" destroy-method="destroy">
+        <property name="meterCode" value="M1"/>
         <property name="meterName" value="Gaz"/>
         <property name="numberOfWheel" value="5"/>
     </bean>
+    <bean id="prototypeMeter" class="com.demo.spring.bo.Meter" scope="prototype"
+          init-method="init" destroy-method="destroy">
+        <property name="meterCode" value="M2"/>
+        <property name="meterName" value="Gaz"/>
+        <property name="numberOfWheel" value="5"/>
+    </bean>
+    <bean class="com.demo.spring.bo.InitMeter"/>
 </beans>

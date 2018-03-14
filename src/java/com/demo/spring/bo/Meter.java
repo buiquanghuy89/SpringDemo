@@ -41,6 +41,14 @@ public class Meter {
         this.numberOfWheel = numberOfWheel;
     }
 
+    public void init() {
+        System.out.println("init meter: meterCode=" + meterCode);
+    }
+
+    public void destroy() {
+        System.out.println("destroy meter: meterCode=" + meterCode);
+    }
+
     public String toString() {
         return new StringBuilder("Meter={")
                 .append("meterCode=").append(meterCode)
