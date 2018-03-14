@@ -1,4 +1,4 @@
-package java.com.demo.spring.bo;
+package com.demo.spring.bo;
 
 /**
  * Created by bqhuy on 3/14/2018.
@@ -39,5 +39,14 @@ public class Meter {
 
     public void setNumberOfWheel(Integer numberOfWheel) {
         this.numberOfWheel = numberOfWheel;
+    }
+
+    public String toString() {
+        return new StringBuilder("Meter={")
+                .append("meterCode=").append(meterCode)
+                .append(", meterName=").append(meterName)
+                .append(", meterType=").append(meterType)
+                .append(", numberOfWheel=").append(numberOfWheel)
+                .append("}").toString();
     }
 }
