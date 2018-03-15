@@ -8,6 +8,7 @@ public class Meter {
     private String meterName;
     private String meterType;
     private Integer numberOfWheel;
+    private Site site;
 
     public String getMeterCode() {
         return meterCode;
@@ -41,6 +42,14 @@ public class Meter {
         this.numberOfWheel = numberOfWheel;
     }
 
+    public Site getSite() {
+        return site;
+    }
+
+    public void setSite(Site site) {
+        this.site = site;
+    }
+
     public void init() {
         System.out.println("init meter: meterCode=" + meterCode);
     }
@@ -55,6 +64,7 @@ public class Meter {
                 .append(", meterName=").append(meterName)
                 .append(", meterType=").append(meterType)
                 .append(", numberOfWheel=").append(numberOfWheel)
+                .append(", site=").append(site)
                 .append("}").toString();
     }
 }

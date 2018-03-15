@@ -6,7 +6,7 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 /**
  * Created by bqhuy on 3/14/2018.
  */
-public class InitMeter implements BeanPostProcessor {
+public class InitObject implements BeanPostProcessor {
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName)
             throws BeansException {
